@@ -1,19 +1,38 @@
 import React , {Component} from "react"
 import Discussion from "../components/discussion"
+
 class Accueil extends Component{
 
     constructor(){
         super();
         this.state = {
-            chatOpen : false,
-            chatNom : "",
-            chatPrenom : ""
+			chat : [],
+			i : 0
         }
-    }
+	}
+	componentWillMount(){
+		this.setState({
+			i : 0
+		})
+	}
 
-    chatClicked(){
-        
-    }
+	chatClicked(){
+
+		const chat = this.state.chat
+		const obj = {
+			i : this.state.i++
+		}
+		if(chat.length < 6){
+			chat.push(obj)
+		}else{
+			chat.shift()
+			chat.push(obj)	
+		}
+		console.log(chat)
+		this.setState({
+			chat : chat
+		})
+	}
 
     render(){
         return(
@@ -497,13 +516,25 @@ class Accueil extends Component{
             </div>
             <a href="#" title=""><i class="la la-times-circle-o"></i></a>
         </div>
+	
     </div>
     
-    {/* <div className="menuDiscussion">
-        <div className="chat-item">
-
-        </div>
-    </div> */}
+    <div className="menuDiscussion">
+		<ul className= "listDiscussion">
+			{this.state.chat.map((item,index) => {
+					return(
+					<li key={index} className="itemDiscussion">
+						<div className="contenuItem">
+							<img src="images/moi.jpg" alt="" />
+							<p>Khalil Ben Miled</p>
+							<i class="fa fa-times"></i>
+							
+						</div>		
+					</li>
+				)}
+			)}
+		</ul>
+    </div>
  
 </>
         )

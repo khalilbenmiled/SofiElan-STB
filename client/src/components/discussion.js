@@ -2,7 +2,7 @@ import React, {Component} from "react"
 
 class Discussion extends Component{
 
-    openChat(e){
+    openChat(){
         this.props.openChat()
     }
     render(){
@@ -24,7 +24,7 @@ class Discussion extends Component{
 												</div>
 												<span><i class="fa fa-circle"></i></span>
 											</div>
-											<div class="suggestion-usd">
+											<div  onClick = {this.openChat.bind(this)} class="suggestion-usd">
 												<img src="images/resources/s2.png" alt="" />
 												<div class="sgt-text">
 													<h4>John Doe</h4>
@@ -32,7 +32,7 @@ class Discussion extends Component{
 												</div>
 												<span><i class="fa fa-circle"></i></span>
 											</div>
-											<div class="suggestion-usd">
+											<div  onClick = {this.openChat.bind(this)} class="suggestion-usd">
 												<img src="images/resources/s3.png" alt="" />
 												<div class="sgt-text">
 													<h4>Poonam</h4>
@@ -40,7 +40,7 @@ class Discussion extends Component{
 												</div>
 												<span><i class="fa fa-circle"></i></span>
 											</div>
-											<div class="suggestion-usd">
+											<div  onClick = {this.openChat.bind(this)} class="suggestion-usd">
 												<img src="images/resources/s3.png" alt="" />
 												<div class="sgt-text">
 													<h4>Poonam</h4>
@@ -48,7 +48,7 @@ class Discussion extends Component{
 												</div>
 												<span><i class="fa fa-circle"></i></span>
 											</div>
-											<div class="suggestion-usd">
+											<div onClick = {this.openChat.bind(this)} class="suggestion-usd">
 												<img src="images/resources/s3.png" alt="" />
 												<div class="sgt-text">
 													<h4>Poonam</h4>
@@ -56,7 +56,7 @@ class Discussion extends Component{
 												</div>
 												<span><i class="fa fa-circle"></i></span>
 											</div>
-											<div class="suggestion-usd">
+											<div onClick = {this.openChat.bind(this)} class="suggestion-usd">
 												<img src="images/resources/s4.png" alt="" />
 												<div class="sgt-text">
 													<h4>Bill Gates</h4>
@@ -64,7 +64,7 @@ class Discussion extends Component{
 												</div>
 												<span><i class="fa fa-circle"></i></span>
 											</div>
-											<div class="suggestion-usd">
+											<div onClick = {this.openChat.bind(this)} class="suggestion-usd">
 												<img src="images/resources/s5.png" alt="" />
 												<div class="sgt-text">
 													<h4>Jessica William</h4>
@@ -72,7 +72,7 @@ class Discussion extends Component{
 												</div>
 												<span><i class="fa fa-circle"></i></span>
 											</div>
-											<div class="suggestion-usd">
+											<div onClick = {this.openChat.bind(this)} class="suggestion-usd">
 												<img src="images/resources/s6.png" alt="" />
 												<div class="sgt-text">
 													<h4>John Doe</h4>
