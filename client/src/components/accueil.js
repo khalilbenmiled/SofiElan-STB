@@ -7,7 +7,7 @@ class Accueil extends Component{
         super();
         this.state = {
 			chat : [],
-			i : 0
+			i : 0	
         }
 	}
 	componentWillMount(){
@@ -22,16 +22,17 @@ class Accueil extends Component{
 		const obj = {
 			i : this.state.i++
 		}
-		if(chat.length < 6){
+		if(chat.length < 3){
 			chat.push(obj)
 		}else{
 			chat.shift()
 			chat.push(obj)	
 		}
-		console.log(chat)
 		this.setState({
 			chat : chat
 		})
+	}
+	openOneChat(e){
 	}
 
     render(){
@@ -404,9 +405,7 @@ class Accueil extends Component{
 								</div>
 							</div>
 
-                        <Discussion openChat={this.chatClicked.bind(this)}/>
-
-
+                        	<Discussion openChat={this.chatClicked.bind(this)}/>
 
 						</div>
 					</div>
@@ -523,19 +522,22 @@ class Accueil extends Component{
 		<ul className= "listDiscussion">
 			{this.state.chat.map((item,index) => {
 					return(
-					<li key={index} className="itemDiscussion">
+					<li onClick={this.openOneChat.bind(this)} key={index} className="itemDiscussion">
 						<div className="contenuItem">
 							<img src="images/moi.jpg" alt="" />
 							<p>Khalil Ben Miled</p>
-							<i class="fa fa-times"></i>
-							
-						</div>		
+							<i class="fa fa-times"></i>	
+							<div className="chatRoom">
+				
+							</div>
+						</div>
+					
 					</li>
 				)}
 			)}
 		</ul>
     </div>
- 
+	
 </>
         )
     }

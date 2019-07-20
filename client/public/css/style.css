@@ -3897,13 +3897,16 @@ a:hover {
 	-o-box-shadow: 0 0 10px rgba(0,0,0,0.17);
 	box-shadow: 0 0 10px rgba(0,0,0,0.17);
 	opacity: 0;
-	visibility: hidden;
+	visibility: visible;
 	z-index: 0;
 }
 .conversation-box.active {
+
 	opacity: 1;
 	visibility: visible;
 	z-index: 9999;
+
+
 }
 .conversation-box:before {
     content: '';
@@ -5356,7 +5359,7 @@ a:hover {
 .menuDiscussion{
 	position: fixed;
 	bottom: 8px;
-	width: 93%;
+	width: 70%;
 	height: 30px;
 }
 .menuDiscussion .listDiscussion{
@@ -5374,7 +5377,7 @@ a:hover {
 	background-color: #48AAD8;
 	color: white;
 	text-align: center;
-	margin: 0 2px;
+	margin: 0 55px;
 	display: flex;
 	cursor: pointer;
 }
@@ -5408,4 +5411,12 @@ a:hover {
 	font-size: 14px;
 	width: 2px;
 
+}
+.menuDiscussion .listDiscussion .itemDiscussion .contenuItem .chatRoom{
+	width: 280px;
+	height: 350px;
+	background-color: #48AAD8;
+	position: absolute;
+	bottom: 40px;
+	right: -30px;
 }
